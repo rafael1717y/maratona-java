@@ -1,4 +1,4 @@
-package javacore.metodosestaticos;
+package javacore.herancaepolimorfismo;
 
 public class Cat {
     String name;            // Instance (non-static) variable
