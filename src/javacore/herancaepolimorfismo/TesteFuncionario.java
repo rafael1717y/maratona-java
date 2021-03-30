@@ -4,7 +4,10 @@ public class TesteFuncionario {
 
     public static void main(String[] args) {
 
-        Funcionario nico = new Funcionario();
+
+        Cliente cliente = new Cliente();
+
+        Gerente nico = new Gerente();
         nico.setNome("Nico St");
         nico.setCpf("20200332");
         nico.setSalario(2600.00);

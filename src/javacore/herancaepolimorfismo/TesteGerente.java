@@ -3,14 +3,18 @@ package javacore.herancaepolimorfismo;
 public class TesteGerente {
 
     public static void main(String[] args) {
+
+        Autenticavel referencia = new Cliente();
+
+
         Gerente g1 = new Gerente();
         g1.setNome("Marco");
         g1.setCpf("334343433");
         g1.setSalario(5000.0);
 
 
-        Funcionario f = new Funcionario();
-        f.setSalario(2000);
+        //Funcionario f = new Funcionario();
+        //f.setSalario(2000);
 
 
         System.out.println(g1.getNome());

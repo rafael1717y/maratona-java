@@ -1,29 +1,30 @@
 package javacore.herancaepolimorfismo;
 
-//Gerente herda da classe funcionário.
+//Gerente é um funcionário, herda da classe funcionario e assina o contrato Aunteitcaval e é um autenticável.
+//Pode-se ter várias interfaces (assinar vários contratos).
+//Gerente eh um Funcionario, Gerente herda da class Funcionario, assina o contrato Autenticavel, eh um Autenticavel
+public class Gerente extends Funcionario implements Autenticavel{
 
-public class Gerente extends Funcionario {
+    private AutenticacaoUtil autenticador;
 
-    private int senha;
-
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
-
-    public boolean autentica(int senha) {
-        if(this.senha == senha) {
-            return true;
-        } else {
-            return false;
-        }
-
+    public Gerente() {
+        this.autenticador = new AutenticacaoUtil();
     }
 
     public double getBonificacao() {
-        System.out.println("Chamando o método de bonificacao de gerente");
-        //super indica que o atributo é da classe mãe. this olha só na classe atual.
-        //reescrita do método da classe mãe getBonificacao()
-        //chama a implementacao padrão da bonificação reaproveitando a implementação padrão.
-        return super.getBonificacao() + super.getSalario();
+        System.out.println("Chamando o método de bonificacao do GERENTE");
+        return super.getSalario();
     }
+
+    @Override
+    public void setSenha(int senha) {
+        this.autenticador.setSenha(senha);
+    }
+
+    @Override
+    public boolean autentica(int senha) {
+        return this.autenticador.autentica(senha);
+    }
+
 }
+
