@@ -4,7 +4,7 @@ import javacore.polimorfismo2.ContaCorrente;
 
 import java.util.ArrayList;
 
-public class Teste2 {
+public class TesteArrayList {
 
     public static void main(String[] args) {
 
